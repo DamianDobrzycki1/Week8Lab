@@ -20,6 +20,9 @@ public class PersonService {
     public Person getPersonByEmployeeId(String employeeId) {
         // fetch data from a database in future lab
         // For simplicity, we return a dummy person here
-        return new Person();
+        return personRepository.findByEmployeeId(employeeId);
+    }
+    public Person getPersonByEmail(String email){
+        return personRepository.findByEmail(email);
     }
 }
