@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jdk.jfr.Name;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +27,7 @@ public class Person {
     private int age;
 
     @Email
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String email;
 
     @NotBlank
